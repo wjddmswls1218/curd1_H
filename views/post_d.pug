@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title D
+        link(rel="stylesheet", href="css/styles.css")
+        
+    body
+        form(action="/postDetail", method="post")
+            input(type="hidden", name="id" value=postData._id)
+            input(type="text", name="title" value=postData.title)
+            textarea(name="description") #{postData.description}
+            input(type="submit" value="수정하기")
+
+        form(action="/postDelete", method="post")
+            input(type="hidden", name="id" value=postData._id)
+            input(type="submit" value="삭제하기")
